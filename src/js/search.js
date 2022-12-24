@@ -1,3 +1,17 @@
+inport fetchS from './'
+const searchEl = document.querySelector('.search-js');
+
+searchEl.addEventListener('submit', searchUrl);
+
+function searchUrl(event) {
+  event.preventDefault();
+  console.dir(event.target.resources.value);
+  const url = `https://rickandmortyapi.com/api/${event.target.resources.value}?${event.target.name.value}`;
+  
+  return url
+}
+
+
 // import axios from 'axios';
 
 // export function fetchImag(what, pageGallery, resultsPerPage) {

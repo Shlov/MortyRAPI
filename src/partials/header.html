@@ -1,24 +1,26 @@
-<header>
-  <h2>Morty<span>Read</span>API</h2>
-</header>
-<form action="">
-  <input type="text">
-  <button type="submit">Search</button>
-  <label>Character
-    <input type="radio" name="resources" value="character">
-  </label>
-  <label>Location
-    <input type="radio" name="resources" value="location">
-  </label>
-  <label>Episode
-    <input type="radio" name="resources" value="episode">
-  </label>
-  <select name="lenguage" id="">
+<header class="header">
+  <h2 class="header__title">Morty<span>Read</span>API</h2>
+  <form class="search search-js" action="">
+    <input class="search__input" type="text" name="name">
+    <button class="search__btn" type="submit">Search</button>
+    <label class="search__label">Character
+      <input class="search__radio" type="radio" name="resources" value="character">
+    </label>
+    <label class="search__label">Location
+      <input class="search__radio" type="radio" name="resources" value="location">
+    </label>
+    <label class="search__label">Episode
+      <input class="search__radio" type="radio" name="resources" value="episode">
+    </label>
+  </form>
+  <p class="header__text">Lenguage</p>
+  <select class="header__select" name="lenguage lenguage-js" id="">
     <option value="en">EN</option>
     <option value="uk">UA</option>
   </select>
-  <select name="theme" id="">
+  <p class="header__text">Theme</p>
+  <select class="header__select" name="theme theme-js" id="">
     <option value="dark">Dark</option>
     <option value="light">Light</option>
   </select>
-</form>
+</header>
