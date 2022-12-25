@@ -1,4 +1,5 @@
-inport fetchS from './'
+import {fetchStarch} from './fetch';
+import {createMarkup} from './markup';
 const searchEl = document.querySelector('.search-js');
 
 searchEl.addEventListener('submit', searchUrl);
@@ -7,8 +8,8 @@ function searchUrl(event) {
   event.preventDefault();
   console.dir(event.target.resources.value);
   const url = `https://rickandmortyapi.com/api/${event.target.resources.value}?${event.target.name.value}`;
-  
-  return url
+  fetchStarch(url).then(data => createMarkup(data));
+  // return url
 }
 
 
