@@ -7,7 +7,7 @@ searchEl.addEventListener('submit', searchUrl);
 function searchUrl(event) {
   event.preventDefault();
   console.dir(event.target.resources.value);
-  const url = `https://rickandmortyapi.com/api/${event.target.resources.value}?${event.target.name.value}`;
+  const url = `https://rickandmortyapi.com/api/${event.target.resources.value}?name=${event.target.name.value}`;
   fetchStarch(url).then(data => createMarkup(data));
   // return url
 }
